@@ -48,4 +48,4 @@ def aplicar_descuento(total: float, porcentaje: float) -> float:
     # rebajados con cupones de descuento altos (ej. total=1990, descuento=60%
     # producía -796.0). La corrección aplica max(..., 0).
     resultado = total - (total * porcentaje / 100)
-    return max(resultado, 0.0)
+    return max(resultado, 0.0) 
