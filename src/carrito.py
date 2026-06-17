@@ -33,10 +33,11 @@ def aplicar_descuento(total: float, porcentaje: float) -> float:
 
     Args:
         total: valor total del carrito (debe ser >= 0).
-        porcentaje: valor entre 0 y 100 que representa el % de descuento.
+        porcentaje: valor porcentual aplicado al total.
 
     Returns:
         Total con descuento aplicado. Nunca retorna un valor menor a 0.
+        Si el porcentaje es mayor a 100, retorna 0.0.
 
     """
     # CORRECCIÓN: se garantiza que el resultado nunca sea negativo.

@@ -49,3 +49,7 @@ def test_descuento_total_100():
 
 def test_porcentaje_sobre_100_no_genera_total_negativo():
     assert aplicar_descuento(10000, 110) == 0.0
+
+
+def test_porcentaje_negativo_incrementa_total():
+    assert aplicar_descuento(10000, -10) == 11000.0
