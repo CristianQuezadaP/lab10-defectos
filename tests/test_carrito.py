@@ -55,5 +55,5 @@ def test_porcentaje_negativo_incrementa_total():
     assert aplicar_descuento(10000, -10) == 11000.0
 
 
-def test_porcentaje_muy_negativo_no_genera_total_negativo():
+def test_porcentaje_muy_negativo_retorna_valor_esperado():
     assert aplicar_descuento(10000, -200) == 30000.0
