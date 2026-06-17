@@ -38,6 +38,7 @@ def aplicar_descuento(total: float, porcentaje: float) -> float:
     Returns:
         Total con descuento aplicado. Nunca retorna un valor menor a 0.
         Si el porcentaje es mayor a 100, retorna 0.0.
+        Si el porcentaje es negativo, el total se incrementa.
 
     """
     # CORRECCIÓN: se garantiza que el resultado nunca sea negativo.
