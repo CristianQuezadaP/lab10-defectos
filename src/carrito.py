@@ -33,16 +33,16 @@ def aplicar_descuento(total: float, porcentaje: float) -> float:
 
     Args:
         total: valor total del carrito (debe ser >= 0).
-        porcentaje: valor entre 0 y 100 que representa el % de descuento.
+        porcentaje: valor porcentual aplicado al total.
 
     Returns:
-        Total con descuento aplicado. Nunca retorna un valor menor a 0.
+        Total con descuento aplicado para un total de entrada no negativo.
+        Se calcula como total - (total * porcentaje / 100) y se limita con
+        max(..., 0.0), por lo que nunca retorna un valor menor a 0.
+        Si el porcentaje es mayor a 100, retorna 0.0.
+        Si el porcentaje es negativo, el total se incrementa.
 
-    Raises:
-        ValueError: si el porcentaje está fuera del rango [0, 100].
     """
-    if porcentaje < 0 or porcentaje > 100:
-        raise ValueError('El porcentaje debe estar entre 0 y 100.')
     # CORRECCIÓN: se garantiza que el resultado nunca sea negativo.
     # El defecto original permitía totales negativos al combinar precios ya
     # rebajados con cupones de descuento altos (ej. total=1990, descuento=60%
