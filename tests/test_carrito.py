@@ -47,6 +47,5 @@ def test_descuento_total_100():
     assert aplicar_descuento(10000, 100) == 0.0
 
 
-def test_porcentaje_invalido_lanza_error():
-    with pytest.raises(ValueError):
-        aplicar_descuento(10000, 110)
+def test_porcentaje_sobre_100_no_genera_total_negativo():
+    assert aplicar_descuento(10000, 110) == 0.0

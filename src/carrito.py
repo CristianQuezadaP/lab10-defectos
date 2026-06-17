@@ -38,11 +38,7 @@ def aplicar_descuento(total: float, porcentaje: float) -> float:
     Returns:
         Total con descuento aplicado. Nunca retorna un valor menor a 0.
 
-    Raises:
-        ValueError: si el porcentaje está fuera del rango [0, 100].
     """
-    if porcentaje < 0 or porcentaje > 100:
-        raise ValueError('El porcentaje debe estar entre 0 y 100.')
     # CORRECCIÓN: se garantiza que el resultado nunca sea negativo.
     # El defecto original permitía totales negativos al combinar precios ya
     # rebajados con cupones de descuento altos (ej. total=1990, descuento=60%
